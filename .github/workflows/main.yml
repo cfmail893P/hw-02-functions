@@ -24,4 +24,4 @@ jobs:
       - name: Run public tests
         env:
             SAVE_SCORE_DB: ~/score.db
-        run: python3 tests/run-tests.py test.out "${{ github.event.pull_request.user.login }}" ${{ matrix.task }}
+        run: python3 tests/run-tests.py ./test.out "${{ github.event.pull_request.user.login }}" ${{ matrix.task }}
